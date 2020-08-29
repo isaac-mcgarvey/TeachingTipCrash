@@ -5,10 +5,15 @@
     xmlns:local="using:TeachingTipCrash"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <local:TeachingTipButton HorizontalAlignment="Center" VerticalAlignment="Center">
+            <local:TeachingTipButton.TeachingTip>
+                <muxc:TeachingTip Title="Title" Subtitle="Subtitle" />
+            </local:TeachingTipButton.TeachingTip>
+        </local:TeachingTipButton>
     </Grid>
 </Page>

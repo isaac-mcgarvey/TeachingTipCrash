@@ -3,5 +3,27 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:TeachingTipCrash">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="local:TeachingTipButton" BasedOn="{StaticResource AccentButtonStyle}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="local:TeachingTipButton">
+                            <Grid>
+                                <Border Width="50" Height="50" Background="Blue" CornerRadius="1000">
+                                    <FontIcon Glyph="&#xE11B;" FontSize="30" FontWeight="Bold" Foreground="White" />
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
 
 </Application>
